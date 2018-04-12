@@ -5,7 +5,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                echo "${env.BUILD_ID}"
+                sh 'make'
+                archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+                echo "Build# " + "${env.BUILD_ID}"
 
             }
         }
