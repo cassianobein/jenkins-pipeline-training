@@ -10,7 +10,7 @@ pipeline {
                 DEBUG_FLAGS = '-g'
             }
             steps {
-                echo 'Building..'
+                echo 'Building new branch..'
                 echo 'Hello mr ${username}'
                 echo "Hello mr ${username}"
                 echo "ENV VARIABLES ${env.DEBUG_FLAGS} on ${env.CC}"
